@@ -345,3 +345,18 @@ main { animation: surge .4s var(--ease) both; }
 .section.after-head { padding-top: 36px; }
 .split.spaced { margin-bottom: 56px; }
 .pub.flat { padding: 0; background: transparent; }
+
+/* Celular: sem o destaque do toque do Android e sem "hover" que fica preso depois do toque */
+a, button, label, input { -webkit-tap-highlight-color: transparent; }
+.nav a:active { background: var(--bg-2); }
+@media (hover: none) {
+  .nav a:hover { background: transparent; color: var(--ink); }
+  .nav a[aria-current="page"]:hover { background: var(--petrol); color: #ffffff; }
+  .nav a.nav-cta:hover { background: var(--amber); color: #12393f; filter: none; }
+  .scale-pills a:hover { background: rgba(255,255,255,.1); color: #ffffff; border-color: rgba(255,255,255,.25); }
+  .scale-link:hover { border-color: transparent; }
+  .opt label:hover { border-color: var(--line); }
+  .post:hover img { transform: none; }
+  .btn-ghost:hover { background: transparent; }
+  .btn-amber:hover, .btn-petrol:hover { filter: none; }
+}
